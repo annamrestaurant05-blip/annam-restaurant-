@@ -4,38 +4,60 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Annam Indian Restaurant Ginza — Join Us Through Different Platforms</title>
+
   <style>
     body {
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
       margin: 0;
       padding: 0;
       display: flex;
       flex-direction: column;
       align-items: center;
       min-height: 100vh;
+
+      /* FULL BACKGROUND IMAGE */
+      background-image: url("https://raw.githubusercontent.com/annamrestaurant05-blip/annam-restaurant-/refs/heads/main/SUR%20IMAGGE.jpg");
+      background-size: contain;      /* Full screen, no crop */
+      background-position: center; /* Centered */
+      background-repeat: no-repeat;
+      background-attachment: fixed; /* Parallax style */
     }
 
-    h1 
-    <img src="https://raw.githubusercontent.com/annamrestaurant05-blip/annam-restaurant-/refs/heads/main/SUR%20IMAGGE.jpg"
-     alt="Annam Indian Restaurant Ginza"
-     style="width:90%; max-width:400px; border-radius:12px; margin-top:20px;">
-    {
+    /* Dark overlay for readability */
+    .overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.45);
+      z-index: 1;
+    }
+
+    /* Content container always above background */
+    .content {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 480px;
+      padding: 20px;
       text-align: center;
-      margin-top: 40px;
-      font-size: 2rem;
-      color: #333;
-      line-height: 1.4;
+      margin-top: 30px;
+      color: white;
     }
 
-    .links-container {
-      margin-top: 30px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 15px;
-      width: 90%;
-      max-width: 400px;
+    h1 {
+      font-size: 1.8rem;
+      line-height: 1.4;
+      margin-bottom: 15px;
+    }
+
+    /* Buttons background box */
+    .button-bg-box {
+      background: rgba(255, 255, 255, 0.15);
+      padding: 25px 20px;
+      border-radius: 16px;
+      backdrop-filter: blur(6px);
+      margin-top: 20px;
     }
 
     a {
@@ -46,86 +68,63 @@
     .btn {
       display: block;
       padding: 14px 20px;
-      background-color: #b91c1c;
+      background-color: rgba(185, 28, 28, 0.95);
       color: white;
       border-radius: 10px;
       text-align: center;
       font-size: 1rem;
       transition: 0.3s;
+      margin-bottom: 12px;
+      font-weight: 500;
     }
 
     .btn:hover {
-      background-color: #A0522D;
+      background-color: rgba(160, 82, 45, 1);
       transform: translateY(-2px);
     }
 
-    .btn:focus {
-      outline: 3px solid #f0a500;
-      outline-offset: 2px;
-    }
-
     footer {
-      margin-top: auto;
-      padding: 20px;
+      margin-top: 40px;
       font-size: 0.8rem;
-      color: #777;
-      text-align: center;
-    }
-
-    @media (max-width: 480px) {
-      h1 {
-        font-size: 1.5rem;
-      }
-
-      .btn {
-        font-size: 0.95rem;
-        padding: 12px 16px;
-      }
+      color: white;
+      z-index: 2;
+      position: relative;
     }
   </style>
 </head>
+
 <body>
-  <h1>Annam Indian Restaurant Ginza<br>Join Us Through Different Platforms</h1>
 
-  <div class="links-container">
-<a href="https://www.google.com/search?sca_esv=40fe422899f2ff7c&hl=en&authuser=0&q=annam+indian+restaurant+ginza+reviews&uds=AOm0WdG2baVm3dbSrUmV0Gv0muiey-aJsEfWXzcqSLXS7aHDfsnR_tJ-UVm0zqWcCTcIH2TDS6f3ta1UznZ4FV5Xl4TuuhilbN0VRWD_84VvFfPU1mZiO0r79VzNwTF0Y5kf_6AbKbK1XifZPKt3MTPpMS7eOeM5l3HtRGYkw_fU0ox8ScokU6uHrMPDL5SR8iyLF7sL-npDaAF-ix8l8OwIJY9gJvi6qNfjLAjF-i9YvtyobscjwIT2O_d0-XOLKv_HksJaQw6OBM_a2Pt7h3QKu7twiqAW1y256oZQE1saqClwaxhLTQy4L0s_sInD8YmClQae8IzaRgnMLGZ7DNA7vIBRWyfahcYy2Eu9NKzBg1JOY6_Qw0KhXYem8Nd7kRjqz2EOG0_9rvgh6mgT-FlU4VH0bvQr_ujGIAw7nf6pPgE_6V3lpuBuz8FMH3IqqHDkL8IAHgkrVRg386PStxzMvZJfdZHbtZ-lOH48jXflGvKVlElwlLeosP0h7eLLP9prR9HXW-RNpLLwg_kLuJBlwIxRgTPFEQ&si=AMgyJEvkVjFQtirYNBhM3ZJIRTaSJ6PxY6y1_6WZHGInbzDnMVNSbDw9GuVpM2apQvLJwQdWS6iHNN_uChh_1PR-xO5jleKac5IdTx_EnxhdLj_zicB9ghv_gvfx24RQiBoee3aUG8V3K-XIkDP0IK9o88fwrli7pQ%3D%3D&sa=X&ved=2ahUKEwjSoLTqxfaQAxV7h1YBHWikHsoQk8gLegQIGxAB&ictx=1&stq=1&cs=0&lei=lrIZadL9LvuO2roP6Mj60Aw#ebo=2" 
-   target="_blank" 
-   rel="noopener noreferrer" 
-   aria-label="Read Annam Indian Restaurant Ginza reviews on Google Search" 
-   class="btn">
-   📝 Google Reviews
-</a>
+  <div class="overlay"></div>
 
+  <div class="content">
 
-  
-    <a href="https://www.tripadvisor.com/Restaurant_Review-g14129573-d6500850-Reviews-Annam_Indian_Restaurant_Ginza_Tokyo-" target="_blank" rel="noopener noreferrer" aria-label="Visit Annam Indian Restaurant Ginza on Tripadvisor" class="btn">🧭 Tripadvisor</a>
-    <a href="https://www.yelp.com/biz/%E3%82%A2%E3%83%8A%E3%83%A0%E6%9C%AC%E6%A0%BC%E3%82%A4%E3%83%B3%E3%83%89%E6%96%99%E7%90%86-%E9%8A%80%E5%BA%A7-%E4%B8%AD%E5%A4%AE%E5%8C%BA" target="_blank" rel="noopener noreferrer" aria-label="Visit Annam Indian Restaurant Ginza on Yelp" class="btn">🍴 Yelp</a>
-    <a href="https://www.opentable.com/r/annam-indian-restaurant-ginza-chuo-ku" target="_blank" rel="noopener noreferrer" aria-label="Reserve a table at Annam Indian Restaurant Ginza on OpenTable" class="btn">🍽️ OpenTable</a>
-    <a href="https://www.happycow.net/reviews/annam-restaurant-tokyo-48538" target="_blank" rel="noopener noreferrer" aria-label="See Annam Indian Restaurant Ginza on HappyCow" class="btn">🌿 HappyCow</a>
-    <a href="https://tabelog.com/tokyo/A1301/A130101/13209943/" target="_blank" rel="noopener noreferrer" aria-label="View Annam Indian Restaurant Ginza on Tabelog" class="btn">🍱 Tabelog</a>
-    <a href="https://www.tiktok.com/@user5782004166991" target="_blank" rel="noopener noreferrer" aria-label="Follow Annam Indian Restaurant Ginza on TikTok" class="btn">🎵 TikTok</a>
-    <a href="https://www.instagram.com/annam_ginza/" target="_blank" rel="noopener noreferrer" aria-label="Follow Annam Indian Restaurant Ginza on Instagram" class="btn">📸 Instagram</a>
-    <a href="https://www.facebook.com/annamrestaurant/" target="_blank" rel="noopener noreferrer" aria-label="Visit Annam Indian Restaurant Ginza on Facebook" class="btn">📘 Facebook</a>
-<a href="https://snapchat.com/t/fqDiCJxf"  
-   target="_blank"  
-   rel="noopener noreferrer"  
-   aria-label="Follow Annam Indian Restaurant Ginza on Snapchat"  
-   class="btn">  
-   👻 Snapchat  
-</a>
+    <h1>Annam Indian Restaurant Ginza<br>Join Us Through Different Platforms</h1>
 
+    <div class="button-bg-box">
 
-    <a href="https://x.com/annamGinza" target="_blank" rel="noopener noreferrer" aria-label="Follow Annam Indian Restaurant Ginza on X" class="btn">🕊️ X (Twitter)</a>
-    <a href="http://wa.me/819060168717" target="_blank" rel="noopener noreferrer" aria-label="Chat with Annam Indian Restaurant Ginza on WhatsApp" class="btn">💬 WhatsApp</a>
-    <a href="https://line.me/ti/p/yKgc5G375o" target="_blank" rel="noopener noreferrer" aria-label="Connect with Annam Indian Restaurant Ginza on LINE" class="btn">💚 LINE</a>
+      <a href="https://www.google.com/search?q=annam+indian+restaurant+ginza" target="_blank" class="btn">📝 Google Reviews</a>
+      <a href="https://www.tripadvisor.com" target="_blank" class="btn">🧭 Tripadvisor</a>
+      <a href="https://www.yelp.com" target="_blank" class="btn">🍴 Yelp</a>
+      <a href="https://www.opentable.com" target="_blank" class="btn">🍽️ OpenTable</a>
+      <a href="https://www.happycow.net" target="_blank" class="btn">🌿 HappyCow</a>
+      <a href="https://tabelog.com" target="_blank" class="btn">🍱 Tabelog</a>
+      <a href="https://www.tiktok.com" target="_blank" class="btn">🎵 TikTok</a>
+      <a href="https://www.instagram.com" target="_blank" class="btn">📸 Instagram</a>
+      <a href="https://www.facebook.com" target="_blank" class="btn">📘 Facebook</a>
+      <a href="https://snapchat.com" target="_blank" class="btn">👻 Snapchat</a>
+      <a href="https://x.com" target="_blank" class="btn">🕊️ X (Twitter)</a>
+      <a href="http://wa.me/819060168717" target="_blank" class="btn">💬 WhatsApp</a>
+      <a href="https://line.me" target="_blank" class="btn">💚 LINE</a>
+
+    </div>
+
   </div>
 
-  <footer>
-    © 2025 Annam Indian Restaurant Ginza
-  </footer>
+  <footer>© 2025 Annam Indian Restaurant Ginza</footer>
+
 </body>
 </html>
-
 
 
 
